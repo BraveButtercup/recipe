@@ -1,7 +1,7 @@
 :root {
   --color-primary: #f9e9ec;
   --color-secondary: #1d2f6f;
-  --color-highlight: #f2dc5d;
+  --color-highlight: #d8bd25;
   --color-lila: #8390fa;
   --color-light: #846a6a;
 }
@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 img {
-  width: 100%; /* ha megado akkor a szülöhöz vizsonyitva 100%*/
+  width: 100%; /* ha megadom akkor a szülöhöz vizsonyitva 100%*/
 }
 a {
   color: var(--color-secondary);
@@ -118,11 +118,10 @@ header {
 }
 .recipe i {
   color: var(--color-highlight);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .recipe-data span {
-  color: var(--color-secondary);
-  font-size: 1.2rem;
+  font-weight: 700;
 }
 .recipe-bottom {
   padding: 1rem;
@@ -133,6 +132,15 @@ header {
 .recipe-bottom h2 {
   text-align: center;
   font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.recipe-text h3 {
+  margin-bottom: 1rem;
+}
+.recipe-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .flex-around-center {
   display: flex;
