@@ -92,7 +92,11 @@ header {
 .header-logo i {
   font-size: 2rem;
 }
-
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 0.75rem;
+}
 @media (min-width: 768px) {
   header {
     display: flex;
