@@ -3,6 +3,7 @@ const CONTAINER = document.querySelector(".js-container");
 const API_URL = 'https://dummyjson.com/recipes?limit=100'
 const INPUT = document.querySelector(".js-input")
 const FORM = document.querySelector(".js-form")
+const BUTTON = document.querySelector(".js-button")
 
 const RECIPES = await fetchData(API_URL);
 
@@ -104,8 +105,8 @@ function createParagraph(list) {
 
 /* Fifth */
 
-function inputEventHandler(e) {
-  const filterValue = e.target.value.toLowerCase();
+function inputEventHandler() {
+  const filterValue = INPUT.value.toLowerCase();
   const filteredData = RECIPES.filter((recipe) => {
     return (
       recipe.name.toLowerCase().includes(filterValue) || recipe.ingredients.join('').toLowerCase().includes(filterValue)
@@ -114,6 +115,8 @@ function inputEventHandler(e) {
   render(filteredData);
 }
 
-INPUT.addEventListener('input', inputEventHandler)
+// INPUT.addEventListener('input', inputEventHandler)
 FORM.addEventListener('submit', e => e.preventDefault())
+BUTTON.addEventListener('click', inputEventHandler)
+
 render(RECIPES);
